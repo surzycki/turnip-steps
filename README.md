@@ -22,7 +22,66 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Email Steps
+ ```gherkin
+I open an email sent to :recipient
+I open an email sent to :recipient with subject :subject
+I click :id in the email
+the email should (not) contain :content
+the email should (not) have an attachment :attachment
+ ```
+
+For capybara to be able to click links in the email
+you'll need to set:
+
+```ruby
+Capybara.server_port  = 3001
+Capybara.app_host     = "http://#{ENV['YOUR_HOST']}:3001"
+```
+
+**config/environments/test.rb**
+```ruby
+config.action_mailer.default_url_options = { host: ENV['YOUR_HOST'], port: 3001 }
+```
+
+### Form Steps
+```gherkin
+I fill in :field with :value
+I select :value from :xpath
+```
+
+### Job Steps
+```gherkin
+
+```
+
+### Model Steps
+```gherkin
+
+```
+
+### Page Steps
+```gherkin
+I goto the :path page
+I goto the :path page with :parameter set to :value
+I goto the path: :path
+I should (not) be on the :path page
+I click on :id
+I click on the :element element
+I should (not) see :text
+the page should (not) have a(n) :page_element element
+I reload the page
+```
+
+
+### Helper Steps
+```gherkin
+I debug
+take a screenshot
+I clear cookies
+I sleep :value
+```
+
 
 ## Development
 

@@ -1,11 +1,11 @@
-step 'I open email sent to :recipient' do |recipient|
+step 'I open an email sent to :recipient' do |recipient|
   send_emails
 
   open_email(recipient)
 end
 
 
-step 'I open email sent to :recipient with subject :subject' do  |recipient, subject|
+step 'I open an email sent to :recipient with subject :subject' do  |recipient, subject|
   send_emails
 
   self.current_emails = emails_sent_to(recipient)

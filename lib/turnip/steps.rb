@@ -1,6 +1,7 @@
 module Turnip; end
 
 module Turnip::Steps
+  HOMEPAGE = 'https://github.com/surzycki/turnip-steps'
 end
 
 require 'turnip/rspec'

@@ -3,6 +3,7 @@ module Turnip; end
 module Turnip::Steps
 end
 
+require 'capybara-screenshot/rspec'
 require 'turnip/rspec'
 
 require 'turnip/steps/placeholder'

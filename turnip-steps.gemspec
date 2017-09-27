@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'capybara-email' # Test your ActionMailer and Mailer messages with Capybara
+  spec.add_dependency 'capybara-screenshot'
   spec.add_dependency 'byebug'
 
   spec.add_development_dependency 'bundler', '~> 1.15'

@@ -1,15 +1,9 @@
-module Turnip
-  module Steps
-    module Placeholder
-      placeholder :whether_to do
-        match /should not/i do
-          false
-        end
+placeholder :whether_to do
+  match /should not/i do
+    false
+  end
 
-        match /should/ do
-          true
-        end
-      end
-    end
+  match /should/ do
+    true
   end
 end

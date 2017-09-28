@@ -22,6 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
+```:field``` should contain ids only
+
+```gherkin
+I fill in 'form_firstname' with 'Bob'
+```
+
 ### Email Steps
  ```gherkin
 I open an email sent to :recipient

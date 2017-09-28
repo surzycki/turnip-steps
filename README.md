@@ -48,6 +48,7 @@ config.action_mailer.default_url_options = { host: ENV['YOUR_HOST'], port: 3001 
 ```gherkin
 I fill in :field with :value
 I select :value from :xpath
+:field should (not) contain :value
 ```
 
 ### Job Steps

@@ -7,7 +7,7 @@ step 'I select :value from :xpath' do |value, path|
   select value, from: path
 end
 
-step ':field :whether_to contain :value' do  |field, positive, value|
+step ':field :whether_to have the value :value' do  |field, positive, value|
   expectation = positive ? :to : :not_to
 
   type = find_field(field).tag_name

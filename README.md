@@ -54,7 +54,9 @@ config.action_mailer.default_url_options = { host: ENV['YOUR_HOST'], port: 3001 
 ```gherkin
 I fill in :field with :value
 I select :value from :xpath
-:field should (not) contain :value
+I attach the file :file to :field
+:field filed should (not) have the value :value
+:field should (not) contain value :value
 ```
 
 ### Job Steps
@@ -86,7 +88,7 @@ I reload the page
 I debug
 take a screenshot
 I clear cookies
-I sleep :value
+I wait :value seconds
 ```
 
 

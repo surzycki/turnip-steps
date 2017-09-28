@@ -13,6 +13,6 @@ step 'I clear cookies' do
 end
 
 
-step 'I sleep :value' do |value|
+step 'I wait :value seonds' do |value|
   sleep value.to_i
 end

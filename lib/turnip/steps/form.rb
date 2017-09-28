@@ -7,6 +7,12 @@ step 'I select :value from :xpath' do |value, path|
   select value, from: path
 end
 
+
+step 'I attach the file :file to :field' do |file,field|
+  attach_file field, "#{Rails.root}/spec/fixtures/#{file}", visible: false
+end
+
+
 step ':field field :whether_to have the value :value' do  |field, positive, value|
   expectation = positive ? :to : :not_to
 
@@ -21,6 +27,7 @@ step ':field field :whether_to have the value :value' do  |field, positive, valu
   end
 end
 
+
 step ':field :whether_to contain value :value' do |field, positive, value|
   expectation = positive ? :to : :not_to
 
@@ -32,4 +39,6 @@ step ':field :whether_to contain value :value' do |field, positive, value|
     raise StandardError, "element type not supported: #{type}"
   end
 end
+
+
 

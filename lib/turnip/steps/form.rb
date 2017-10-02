@@ -10,6 +10,7 @@ end
 
 step 'I attach the file :file to :field' do |file,field|
   attach_file field, "#{Rails.root}/spec/fixtures/#{file}", visible: false
+
 end
 
 

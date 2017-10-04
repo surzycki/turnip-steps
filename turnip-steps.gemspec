@@ -31,9 +31,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'capybara-email',      '~> 2.5' # Test your ActionMailer and Mailer messages with Capybara
   spec.add_dependency 'capybara-screenshot', '~> 1.0'
+  spec.add_dependency 'rspec',               '~> 3.0'
   spec.add_dependency 'byebug'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'rake',    '~> 10.0'
-  spec.add_development_dependency 'rspec',   '~> 3.0'
 end

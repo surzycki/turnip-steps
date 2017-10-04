@@ -5,6 +5,7 @@ end
 
 require 'turnip/rspec'
 require 'capybara-screenshot/rspec'
+require 'capybara/email/rspec'
 
 require 'turnip/steps/placeholder'
 require 'turnip/steps/application'

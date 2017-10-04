@@ -3,8 +3,8 @@ module Turnip; end
 module Turnip::Steps
 end
 
-require 'capybara-screenshot/rspec'
 require 'turnip/rspec'
+require 'capybara-screenshot/rspec'
 
 require 'turnip/steps/placeholder'
 require 'turnip/steps/application'

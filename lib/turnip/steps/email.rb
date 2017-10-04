@@ -35,3 +35,8 @@ step 'the email :whether_to have an attachment :attachment' do |positive, attach
 end
 
 
+step 'take a screenshot of the email' do
+  current_email.save_page
+end
+
+

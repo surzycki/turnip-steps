@@ -7,6 +7,8 @@ require 'turnip/rspec'
 require 'capybara-screenshot/rspec'
 require 'capybara/email/rspec'
 
+require 'turnip/helpers/email'
+
 require 'turnip/steps/placeholder'
 require 'turnip/steps/application'
 require 'turnip/steps/email'

@@ -78,7 +78,7 @@ I goto the path: :path
 I should (not) be on the :path page
 I click on :id
 I click on the :element element
-I should (not) see :text
+I should (not) see :content
 the page should (not) have a(n) :page_element element
 I reload the page
 ```

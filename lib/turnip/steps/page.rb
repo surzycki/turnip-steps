@@ -37,7 +37,7 @@ step 'I click on the :element element' do |element|
 end
 
 
-step 'I :whether_to see :text' do |positive, text|
+step 'I :whether_to see :content' do |positive, content|
   expectation = positive ? :to : :not_to
   expect(page).send expectation have_content(content)
 end

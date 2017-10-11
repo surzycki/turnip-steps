@@ -39,7 +39,7 @@ end
 
 step 'I :whether_to see :text' do |positive, text|
   expectation = positive ? :to : :not_to
-  expect(page.body).send expectation, have_text(text)
+  expect(page).send expectation have_content(content)
 end
 
 

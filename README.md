@@ -35,6 +35,7 @@ I open an email sent to :recipient with subject :subject
 I click :id in the email
 the email should (not) contain :content
 the email should (not) have an attachment :attachment
+take a screenshot of the email
  ```
 
 For capybara to be able to click links in the email

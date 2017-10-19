@@ -54,11 +54,14 @@ config.action_mailer.default_url_options = { host: ENV['YOUR_HOST'], port: 3001 
 ### Form Steps
 ```gherkin
 I fill in :field with :value
-I select :value from :xpath
+I select :value from :field
 I attach the file :file to :field
 :field filed should (not) have the value :value
 :field should (not) contain value :value
 ```
+
+**file**
+Should be located in ```spec/fixtures/```
 
 ### Job Steps
 ```gherkin
@@ -78,6 +81,7 @@ I goto the path: :path
 I should (not) be on the :path page
 I click on :id
 I click on the :element element
+I click on the text :text
 I should (not) see :content
 the page should (not) have a(n) :page_element element
 I reload the page

@@ -37,6 +37,11 @@ step 'I click on the :element element' do |element|
 end
 
 
+step 'I click on the text :text' do |text|
+  find(:xpath,"//*[normalize-space(text())='#{text}']").click
+end
+
+
 step 'I :whether_to see :content' do |positive, content|
   expectation = positive ? :to : :not_to
   expect(page).send expectation, have_content(content)

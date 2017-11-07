@@ -56,8 +56,8 @@ config.action_mailer.default_url_options = { host: ENV['YOUR_HOST'], port: 3001 
 I fill in :field with :value
 I select :value from :field
 I attach the file :file to :field
-:field filed should (not) have the value :value
-:field should (not) contain value :value
+:field field should (not) have the value :value
+:field field should (not) contain value :value
 ```
 
 **file**

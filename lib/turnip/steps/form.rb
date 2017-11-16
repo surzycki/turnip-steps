@@ -14,15 +14,15 @@ step 'I attach the file :file to :field' do |file,field|
 end
 
 
-step ':field field :whether_to have the value :value' do  |field, positive, value|
+step ':field :whether_to have the value :value' do  |field, positive, value|
   expectation = positive ? :to : :not_to
 
-  type = find_field(field).tag_name
+  type = find_field(field, disabled: :all).tag_name
 
   if type =~ /input|textarea/
-    expect(page).send expectation, have_field(field, exact: value)
+    expect(page).send expectation, have_field(field, exact: value, disabled: :all)
   elsif type == 'select'
-    expect(page).send expectation, have_select(field, selected: value)
+    expect(page).send expectation, have_select(field, selected: value, disabled: :all)
   else
     raise StandardError, "input type not supported: #{type}"
   end
@@ -32,7 +32,7 @@ end
 step ':field :whether_to contain value :value' do |field, positive, value|
   expectation = positive ? :to : :not_to
 
-  type = find_by_id(field).tag_name
+  type = find_field(field, disabled: :all).tag_name
 
   if type =~ /img/
     expect(page).send expectation, have_xpath("//img[contains(@src,'#{value}')]")

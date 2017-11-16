@@ -14,7 +14,7 @@ step 'I attach the file :file to :field' do |file,field|
 end
 
 
-step ':field :whether_to have the value :value' do  |field, positive, value|
+step ':field field :whether_to have the value :value' do  |field, positive, value|
   expectation = positive ? :to : :not_to
 
   type = find_field(field, disabled: :all).tag_name

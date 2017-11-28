@@ -20,7 +20,7 @@ step ':field field :whether_to have the value :value' do  |field, positive, valu
   type = find_field(field, disabled: :all).tag_name
 
   if type =~ /input|textarea/
-    expect(page).send expectation, have_field(field, exact: value, disabled: :all)
+    expect(page).send expectation, have_field(field, with: value, disabled: :all)
   elsif type == 'select'
     expect(page).send expectation, have_select(field, selected: value, disabled: :all)
   else

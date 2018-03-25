@@ -32,7 +32,7 @@ end
 step ':field :whether_to contain value :value' do |field, positive, value|
   expectation = positive ? :to : :not_to
 
-  type = find_field(field, disabled: :all).tag_name
+  type = find_by_id(field).tag_name
 
   if type =~ /img/
     expect(page).send expectation, have_xpath("//img[contains(@src,'#{value}')]")

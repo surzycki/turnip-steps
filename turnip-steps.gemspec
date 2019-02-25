@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'capybara-email',      '~> 2.5' # Test your ActionMailer and Mailer messages with Capybara
+  spec.add_dependency 'capybara-email',      '~> 3.0' # Test your ActionMailer and Mailer messages with Capybara
   spec.add_dependency 'capybara-screenshot', '~> 1.0'
   spec.add_dependency 'turnip',              '~> 3.0'
   spec.add_dependency 'byebug'

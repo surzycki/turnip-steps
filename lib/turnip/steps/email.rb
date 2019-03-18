@@ -34,6 +34,11 @@ step 'the email :whether_to have an attachment :attachment' do |positive, attach
   expect(current_email.attachments.first.filename).send expectation, eq(attachment)
 end
 
+step 'the email :whether_to have an attachment :attachment with index :index' do |positive, attachment, index|
+  expectation = positive ?  :to : :not_to
+
+  expect(current_email.attachments[index].filename).send expectation, eq(attachment)
+end
 
 step 'take a screenshot of the email' do
   current_email.save_page

@@ -20,7 +20,7 @@ module Turnip
       private
       def email_jobs
         ::ActiveJob::Base.queue_adapter.enqueued_jobs.select do |job|
-          job[:job] == ActionMailer::DeliveryJob
+          job[:job].to_s['ActionMailer']
         end
       end
     end

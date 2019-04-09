@@ -38,7 +38,7 @@ end
 
 
 step 'I click on the text :text' do |text|
-  find(:xpath,"//*[normalize-space(text())='#{text}']").click
+  find(:xpath,"//*[normalize-space(text())=\"#{text}\"]").click
 end
 
 
